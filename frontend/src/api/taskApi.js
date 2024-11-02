@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:5000/api/task';
+const API_URL = 'https://task-management-yooi.onrender.com/api/task';
 
 export const createTask = async(userData) =>{
   console.log(userData);
