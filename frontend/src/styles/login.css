@@ -1,0 +1,71 @@
+.auth_component {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth_component_form {
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.auth_component_input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.auth_component_input-wrapper .icon {
+  position: absolute;
+  left: 10px;
+  color: #888;
+}
+
+.auth_component_input-wrapper input {
+  padding-left: 40px;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.auth_component_toggle-password {
+  position: absolute;
+  right: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.auth_component_btn-primary, .auth_component_btn-secondary {
+  width: 100%;
+  height: 35px;
+  background-color: #17A2B8;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth_component_btn-secondary {
+  background-color: white;
+  color: #17A2B8;
+  border: 1px solid #17A2B8;
+}
+
+.auth_component_btn-primary:hover {
+  background-color: #138496;
+}
+
+.auth_component_link-text {
+  margin-top: 10px;
+}

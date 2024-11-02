@@ -1,0 +1,180 @@
+/* Task Card */
+.task-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header */
+.task-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card-header-section-one {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: small;
+}
+
+.priority-status {
+  display: flex;
+  align-items: center;
+}
+
+.priority-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.user-initials {
+  background-color: pink;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* More Options */
+.more-options {
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-card-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 5px 0;
+  border-radius: 6px;
+  z-index: 1;
+  width: 120px;
+  font-size: 0.9rem;
+}
+
+.task-card-dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.task-card-dropdown-menu button:hover {
+  background-color: #f0f0f0;
+  color: #0073e6;
+}
+
+/* Title */
+.task-card-title {
+  text-align: left;
+  margin: 1px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Checklist */
+.checklist {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.checklist_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checklist-title {
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+}
+
+.taskcard-task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.taskcard-task-item input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #18b0ff;
+  width: 18px;
+  height: 18px;
+}
+
+.taskcard-task-item label {
+  font-size: 0.9em;
+}
+
+.done label {
+  color: gray;
+}
+
+/* Footer */
+.task-footer {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  margin-top: 15px;
+}
+
+.due-date {
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+/* Task Status */
+.task-status {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.task-status button {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+  font-size: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.task-status button:hover {
+  background-color: #bdbdbd;
+}
+
+.task-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

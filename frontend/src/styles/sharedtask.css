@@ -1,0 +1,113 @@
+.sharedTask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sharedTask_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sharedTask_component {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sharedTask_priorityStatus {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sharedTask_priorityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.sharedTask_title {
+  text-align: left;
+  margin: 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.sharedTask_checklist {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.sharedTask_checklistContent {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sharedTask_taskItem {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.sharedTask_taskItem input[type="checkbox"] {
+  accent-color: #18b0ff;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.sharedTask_taskLabel {
+  font-size: 1em;
+  color: #333;
+}
+
+.sharedTask_taskItem.done .sharedTask_taskLabel {
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .sharedTask_component {
+    width: 90%;
+  }
+  .sharedTask_header h2 {
+    font-size: 1.5em;
+  }
+  .sharedTask_priorityStatus h6,
+  .sharedTask_checklistContent p {
+    font-size: 0.9em;
+  }
+}
+
+.sharedTask_duedate {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.sharedTask_duedate_date {
+  padding: 2px 5px;
+  border-radius: 8px;
+  color: white;
+}

@@ -1,0 +1,109 @@
+.auth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.auth_component_first {
+  width: 60%;
+  height: 100%;
+  background-color: #17a2b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.auth_component_second {
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img_wrapper {
+  position: relative;
+  width: 13rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assests/Back.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 13rem;
+  animation: bounce 2s ease-in-out forwards;
+}
+
+.img_wrapper img {
+  width: 80%;
+  max-width: 100%;
+}
+
+.auth h1 {
+  font-size: 2.2rem;
+  animation: slideIn 1.5s ease-in-out forwards;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.auth p {
+  font-size: 1rem;
+  animation: fadeInUp 2s ease-in-out forwards;
+  transform: translateY(50px);
+  opacity: 0;
+  margin-top: 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-60px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

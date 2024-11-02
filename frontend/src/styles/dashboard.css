@@ -1,0 +1,20 @@
+.dashboard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.dashboard_component_one{
+    width: 20%;
+    height: 100%;
+    border-right:2px solid rgba(0, 0, 0, 0.1) ;
+    
+}
+
+.dashboard_component_two{
+    width: 80%;
+    height: 100%;
+}

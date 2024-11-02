@@ -1,0 +1,341 @@
+.task-form-container {
+  background-color: #ffffff;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Task Form Title Section */
+.task-form-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 15%;
+}
+
+.task-form-title label {
+  font-size: 16px;
+  color: #333;
+  text-align: start;
+}
+
+.task-form-title input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Priority Section */
+.task-form-priority-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.task-form-priority-section label {
+  font-size: 15px;
+  color: #555;
+}
+
+.priority-buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.priority-buttons button {
+  font-size: 12px;
+  padding: 8px 6px;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.priority-buttons button.active {
+  background-color: #c5c5c5;
+  color: white;
+}
+
+/* Assign To Section */
+.task-form-assign-section {
+  width: 100%;
+}
+
+.task-form-assign-section-one {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-form-assign-section label {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+}
+
+.task-form-assign-section-one-input-wrapper{
+  width: 80%;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.task-form-assign-section-one-input-wrapper-toggel{
+  position:relative;
+  top: 0px;
+  right: 0px;
+}
+
+
+.task-form-assign-section input {
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.task-form-assign-section input :active{
+  border: none;
+}
+
+
+.task-form-assign-section-dropdown {
+  position: absolute;
+  width: 29%;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  right: 32%;
+  box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+.task-form-assign-section-dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+.task-form-assign-section-dropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.task-form-assign-section-dropdownItem:hover {
+  background-color: #f5f5f5;
+}
+
+.task-form-assign-section-dropdownItem .initials {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffebeb;
+  color: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.task-form-assign-section-dropdownItem button {
+  background-color: white;
+  border: 2px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+/* Task Checklist Section */
+.task-form-checklist-section {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.task-form-checklist-section label {
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.task-form-checklist-container {
+  width: 100%;
+  max-height: 70%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+}
+
+.task-form-checklist-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-form-checklist-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.task-form-checklist-container::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 8px;
+}
+
+.task-form-checklist-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.task-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 0px 10px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #18b0ff;
+  width: 18px;
+  height: 18px;
+}
+
+.task-item-text {
+  width: 90%;
+  height: 100%;
+  padding: 10px 0px;
+  font-size: 14px;
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.task-form-checklist-container-delet-btn {
+  color: red;
+  border: none;
+  background: none;
+}
+
+/* Add New Task Button */
+.task-form-add-task {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.task-form-add-task button {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: white;
+  color: #898b8b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-form-add-task button:hover {
+  background-color: #bdc0c2;
+  color: white;
+}
+
+/* Footer Section */
+.task-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-form-buttons button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+}
+
+.task-form-buttons button:first-child {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+.task-form-buttons button:last-child {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+}
+
+.task-form-buttons button:first-child:hover {
+  background-color: #f8d7da;
+  transform: scale(1.05);
+}
+
+.task-form-buttons button:last-child:hover {
+  background-color: #138496;
+  transform: scale(1.05);
+}
+
+.required-icon {
+  color: red;
+  font-size: 0.5em;
+  margin-left: 4px;
+  position: relative;
+}
+
+/* Priority Dot Styles */
+.priority-buttons-priority-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.priority-buttons-priority-dot.high-priority {
+  background-color: red;
+}
+
+.priority-buttons-priority-dot.moderate-priority {
+  background-color: #18b0ff;
+}
+
+.priority-buttons-priority-dot.low-priority {
+  background-color: green;
+}
