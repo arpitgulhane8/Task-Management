@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://task-management-yooi.onrender.com/auth';
 
 export const registerUser = async (userData) => {
   try {
