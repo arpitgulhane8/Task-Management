@@ -44,7 +44,7 @@ function Board() {
         <div className="Board_header">
           <div className="Board_header_section">
             <h3 className="Board_wlc_msg">Welcome! {userinfo.name}</h3>
-            <p>{`${new Date().getDate()}${['th', 'st', 'nd', 'rd'][(new Date().getDate() % 10) - 1] || 'th'} ${new Date().toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}`}</p>
+            <p>{`${new Date().getDate()}${['st', 'nd', 'rd', 'th'][(new Date().getDate() % 10) - 1] || 'th'} ${new Date().toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}`}</p>
           </div>
           <div className="Board_header_section">
             <div className="Board_header_section_component">
