@@ -26,6 +26,7 @@ exports.createTask = async (req, res) => {
 
 exports.getTaskAnalytics = async (req, res) => {
   const userId = req.user._id;
+   const useremail = req.user.email;
 
   try {
     const analytics = await Task.aggregate([
@@ -35,7 +36,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 status: "Backlog",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -44,7 +45,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 priority: "LOW PRIORITY",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail}],
               },
             },
             { $count: "count" },
@@ -53,7 +54,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 priority: "MODERATE PRIORITY",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -62,7 +63,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 priority: "HIGH PRIORITY",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -71,7 +72,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 status: "Inprogress",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo: useremail }],
               },
             },
             { $count: "count" },
@@ -80,7 +81,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 status: "Done",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -89,7 +90,7 @@ exports.getTaskAnalytics = async (req, res) => {
             {
               $match: {
                 status: "Todo",
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -102,7 +103,7 @@ exports.getTaskAnalytics = async (req, res) => {
                   $ne: null,
                   $type: "date",
                 },
-                $or: [{ createdBy: userId }, { assignTo: userId }],
+                $or: [{ createdBy: userId }, { assignTo:useremail }],
               },
             },
             { $count: "count" },
@@ -135,6 +136,7 @@ exports.getTaskAnalytics = async (req, res) => {
 exports.getTasksByFilter = async (req, res) => {
   const { selectedFilter } = req.query;
   const userId = req.user._id;
+   const useremail = req.user.email;
   let startDate;
   const endDate = moment.utc().endOf("day");
 
@@ -156,7 +158,7 @@ exports.getTasksByFilter = async (req, res) => {
             $gte: startDate.toDate(),
             $lt: endDate.toDate(),
           },
-          $or: [{ createdBy: userId }, { assignTo: userId }],
+          $or: [{ createdBy: userId }, { assignTo:useremail }],
         },
       },
       {
