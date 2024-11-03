@@ -30,6 +30,10 @@
   align-items: center;
 }
 
+.Board_header_section_component p{
+  cursor: pointer;
+}
+
 .Board_wlc_msg {
   font-size: 28px;
   margin-bottom: 5px;
