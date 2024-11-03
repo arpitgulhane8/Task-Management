@@ -123,3 +123,7 @@
   align-items: center;
   gap: 10px;
 }
+
+.Board_column_header_section_right i{
+  cursor: pointer;
+}
