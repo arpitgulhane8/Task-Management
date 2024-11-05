@@ -110,18 +110,21 @@ export const update = (updateData) => async (dispatch) => {
 
     let userInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
     userInfo = { ...userInfo, ...updatedUserInfo };
-    console.log(updatedUserInfo);
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
 
     dispatch({
       type: UPDATE_USER_SUCESS,
       payload: updatedUserInfo,
     });
-
+    
     toast.success(response.data.message || "User updated successfully!");
+
+    if (updateData.email || updateData.password) {
+      dispatch(logout());
+      toast.info("You have been logged out for security reasons. Please log in again.");
+    }
   } catch (error) {
-    const errorMessage =
-      error.data?.message || "User update failed. Please try again.";
+    const errorMessage = error.data?.message || "User update failed. Please try again.";
     dispatch({
       type: UPDATE_USER_FAIL,
       payload: errorMessage,
