@@ -108,7 +108,9 @@ exports.updateUser = async (req, res) => {
       user.email = email;
     }
     if (password) {
-      if (password || (await user.comparePassword(password))) {
+      const isMatch = await user.comparePassword(password);
+      
+      if (isMatch) {
         user.password = newPassword;
       } else {
         return res.status(400).json({ message: "Wrong Password" });
