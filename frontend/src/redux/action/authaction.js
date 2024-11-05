@@ -121,7 +121,7 @@ export const update = (updateData) => async (dispatch) => {
     toast.success(response.data.message || "User updated successfully!");
   } catch (error) {
     const errorMessage =
-      error.response?.data?.message || "User update failed. Please try again.";
+      error.data?.message || "User update failed. Please try again.";
     dispatch({
       type: UPDATE_USER_FAIL,
       payload: errorMessage,
