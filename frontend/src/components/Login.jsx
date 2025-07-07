@@ -59,7 +59,7 @@ const Login = () => {
         <p className="auth_component_link-text">
           Have no account yet? 
         </p>
-        <button onClick={() => navigate('/auth/register')} className="auth_component_btn-secondary">Register</button>
+        <button type="button"  onClick={() => navigate('/auth/register')} className="auth_component_btn-secondary">Register</button>
       </form>
     </div>
   );
