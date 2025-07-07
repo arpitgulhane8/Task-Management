@@ -91,7 +91,7 @@ const Register = () => {
         <p className="auth_component_link-text">
           Already have an account? 
         </p>
-        <button onClick={() => navigate('/auth/login')} className="auth_component_btn-secondary">Login</button>
+        <button type="button"  onClick={() => navigate('/auth/login')} className="auth_component_btn-secondary">Login</button>
       </form>
     </div>
   );
